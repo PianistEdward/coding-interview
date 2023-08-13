@@ -1,5 +1,15 @@
 # Java并发编程
 
+------------------------------------------《并发编程的艺术》读书笔记
+
+资料：
+
+[深入理解多线程](https://www.hollischuang.com/archives/tag/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%A4%9A%E7%BA%BF%E7%A8%8B)
+
+[深入理解Java并发编程](https://www.hollischuang.com/archives/tag/%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3java%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b)
+
+[Synchronized解析——如果你愿意一层一层剥开我的心 - 掘金](https://juejin.cn/post/6844903918653145102)
+
 <!--基于《Java并发编程的艺术》-->
 
 ## 一、并发编程的挑战
@@ -27,6 +37,19 @@ vmstat命令：CS（Content Switch）表示上下文切换的次数。
 也可以用jdk自带的jconsole，jvisualvm，开源工具arthas。
 
 ## 二、底层实现原理
+
+CPU层面
+
+寄存器：
+
+- 存储内存地址类寄存器
+  
+  程序计数器，基址寄存器，变址寄存器。
+- 存储非内存地址寄存器
+  
+  累加寄存器，通用寄存器，标志寄存器。
+
+代码在CPU执行流程
 
 ### 2.1 volatile
 
@@ -106,8 +129,3 @@ CPU流水线
 2）只能保证一个共享变量的原子操作
 
 ## 三、Java内存模型
-
-
-
-
-
